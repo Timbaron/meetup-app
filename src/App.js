@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router-dom";
 
+import AllMeetupPage from "./Pages/AllMeets";
+import NewMeetupPage from "./Pages/NewMeetup";
+import FavoritePage from "./Pages/Favorite";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Route path='/'>
+        <AllMeetupPage />
+      </Route>
+      <Route path='/new-meetup/'>
+        <NewMeetupPage />
+      </Route>
+      <Route path='/favorite'>
+        <FavoritePage />
+      </Route>
     </div>
   );
 }
